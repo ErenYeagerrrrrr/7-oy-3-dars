@@ -5,11 +5,11 @@ const Header = () => {
         <div className="header text-white px-[50px] py-[50px]">
             <div className="main-header flex justify-between items-center">
                 <div>
-                    <img src="../../public/logo.svg" alt="logo" />
+                    <a href="/"><img src="../../public/logo.svg" alt="logo" /></a>
                 </div>
                 <ul className="flex gap-3">
-                    <li><a href="#"><img src="../../public/Main.svg" alt="" /></a></li>
-                    <li><a href="#"><img src="../../public/Transfer.svg" alt="" /></a></li>
+                    <Link to="/"><li><a href="#"><img src="../../public/Main.svg" alt="" /></a></li></Link>
+                    <Link to="/servis"><li><a href="#"><img src="../../public/Transfer.svg" alt="" /></a></li></Link>
                     <li><a href="#"><img src="../../public/Monitoring.svg" alt="" /></a></li>
                     <li><a href="#"><img src="../../public/Monitoring (1).svg" alt="" /></a></li>
                 </ul>

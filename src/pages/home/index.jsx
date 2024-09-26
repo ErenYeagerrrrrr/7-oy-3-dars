@@ -1,4 +1,4 @@
-
+import Card from '../../components/Card'
 
 const HomePage = () => {
 
@@ -28,33 +28,9 @@ const HomePage = () => {
         <div className="contents__block mt-4 mb-[100px]">
           <div className="contents__block__content flex justify-between align-center ">
             <h3>For a week</h3>
-            <a href="#" className="text-[red]">View all  ></a>
+            <a href="#" className="text-[red]">View all  </a>
           </div>
-          <ul className="flex justify-between items-center mt-8">
-            <li><button><img src="/public/Group 24.svg" alt="" /></button></li>
-            <li>
-              <div className="w-[280px] h-[400px] bg-[#1D1D1D] rounded-[10px] mb-2"></div>
-              <h4>Kung Fu Panda 4
-                ENGLISH</h4>
-              <p>Комедия, Фэнтези</p>
-            </li>
-            <li>
-              <div className="w-[280px] h-[400px] bg-[#1D1D1D] rounded-[10px] mb-2"></div>
-              <h4>Dune 2 – EN</h4>
-              <p>Фантастика, Боевик</p>
-            </li>
-            <li>
-              <div className="w-[280px] h-[400px] bg-[#1D1D1D] rounded-[10px] mb-2"></div>
-              <h4>Дюна – RU</h4>
-              <p>Фантастика, Боевик</p>
-            </li>
-            <li>
-              <div className="w-[280px] h-[400px] bg-[#1D1D1D] rounded-[10px] mb-2"></div>
-              <h4>Kung Fu Panda 4 Russian</h4>
-              <p>Комедия, Фэнтези</p>
-            </li>
-            <li><button><img src="/public/Group 23.svg" alt="" /></button></li>
-          </ul>
+          <Card />
         </div>
       </section>
     </div>
