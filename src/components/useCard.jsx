@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 import { request } from "../utils/api/request"
 import { toast } from "react-toastify"
-import { QueryClient, useQuery, useQueryClient } from "@tanstack/react-query"
+import {  useQuery, useQueryClient } from "@tanstack/react-query"
 
 
 const useCard = (url) => {

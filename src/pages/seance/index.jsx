@@ -43,7 +43,7 @@ const Seance = () => {
                     <div>
                         <CalendarBtn />
                         <h3 className='text-[20px] font-bold my-4  pl-[50px]'>Cinematica</h3>
-                        <p className='text-[16px] text-[#4D4D4D] pl-[50px]'>7, Улица Алмазар​, Шайхантахурский район</p>
+                        <p className='text-[16px] text-[#4D4D4D] pl-[50px]'>7, Улица Алмазар Шайхантахурский район</p>
                         <BiletPrice />
                     </div>
                 ) : (
