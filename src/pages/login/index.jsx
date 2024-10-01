@@ -9,8 +9,8 @@ const Login = () => {
   
   return (
     <div className="login mx-auto text-center text-white">
-      <div>
-        <Link to="/"><IoIosArrowBack className=" bg-[#111111] h-[80px] w-[80px] p-5 rounded-[10px]" /></Link>
+      <div className="mb-[100px]">
+        <Link to="/"><IoIosArrowBack className=" bg-[#111111] h-[60px] w-[60px] p-5 rounded-[10px]" /></Link>
         <h2 className="text-[30px] font-bold">Регистрация</h2>
         <p className="text-[16px] mx-auto w-[300px] mb-4">Введите номер телефона для того чтобы войти или пройти регистрацию</p>
         <div className="flex flex-col gap-3">

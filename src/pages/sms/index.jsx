@@ -7,8 +7,8 @@ const Sms = () => {
 
     return (
         <div className="text-white mx-auto text-center">
-            <div>
-                <Link to="/login"><IoIosArrowBack className=" bg-[#111111] h-[80px] w-[80px] p-5 rounded-[10px]" /></Link>
+            <div className="mb-[100px]">
+                <Link to="/login"><IoIosArrowBack className=" bg-[#111111] h-[60px] w-[60px] p-5 rounded-[10px]" /></Link>
                 <h2 className="text-[30px] font-bold">Введите СМС-код</h2>
                 <p className="text-[16px] mx-auto w-[300px] mb-4">
                     Введите СМС-код, который мы отправили на номер <span className="text-[red]">+998901234567</span>

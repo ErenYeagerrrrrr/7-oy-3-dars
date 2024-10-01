@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom"
+import logo from "../../public/logo.svg"
+import main from "../../public/Main.svg"
+import transfer from "../../public/Transfer.svg"
+import monitoring from "../../public/Monitoring.svg"
+import monitoring2 from "../../public/Monitoring (1).svg"
 
 const Header = () => {
     return (
         <div className="header text-white px-[50px] py-[50px]">
             <div className="main-header flex justify-between items-center">
                 <div>
-                    <a href="/"><img src="../../public/logo.svg" alt="logo" /></a>
+                    <a href="/"><img src={logo} alt="logo" /></a>
                 </div>
                 <ul className="flex gap-3">
-                    <Link to="/"><li><a href="#"><img src="../../public/Main.svg" alt="" /></a></li></Link>
-                    <Link to="/servis"><li><a href="#"><img src="../../public/Transfer.svg" alt="" /></a></li></Link>
-                    <li><a href="#"><img src="../../public/Monitoring.svg" alt="" /></a></li>
-                    <li><a href="#"><img src="../../public/Monitoring (1).svg" alt="" /></a></li>
+                    <Link to="/"><li><a href="#"><img src={main} alt="" /></a></li></Link>
+                    <Link to="/servis"><li><a href="#"><img src={transfer} alt="" /></a></li></Link>
+                    <li><a href="#"><img src={monitoring} alt="" /></a></li>
+                    <li><a href="#"><img src={monitoring2} alt="" /></a></li>
                 </ul>
                 <div className="flex gap-5">
                     <select className="w-[60px] h-[30px] bg-[#000] text-[#fff] rounded-[5px] border border-[#000000]">
