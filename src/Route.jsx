@@ -5,6 +5,8 @@ import Login from './pages/login'
 import Sms from './pages/sms'
 import Servis from './pages/servis'
 import Seance from './pages/seance'
+import Bilet from './pages/bilet'
+import Search from './pages/search'
 const Router = () => {
     return (
         <BrowserRouter>
@@ -15,6 +17,8 @@ const Router = () => {
                     <Route path= "/sms" element={<Sms />} />
                     <Route path="/servis" element={<Servis/>} />
                     <Route path='/seance/:id' element={<Seance />} />
+                    <Route path='/bilet' element={<Bilet />} />
+                    <Route path='/search' element={<Search />} />
                 </Route>
             </Routes>
         </BrowserRouter>

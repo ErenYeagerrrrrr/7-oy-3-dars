@@ -5,8 +5,7 @@ import { InputMask } from '@react-input/mask';
 
 const Login = () => {
   const [tel, setTel] = useState('')
-  console.log(tel);
-  
+    
   return (
     <div className="login mx-auto text-center text-white">
       <div className="mb-[100px]">

@@ -50,7 +50,7 @@ const HomePage = () => {
             <a href="#" className="text-[red]">View all  </a>
           </div>
           <div>
-            <Render data={data} loading={loading} error={error} />
+            <Render data={data} loading={loading} error={error}/>
           </div>
         </div>
       </section>

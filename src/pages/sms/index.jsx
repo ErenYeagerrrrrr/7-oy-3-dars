@@ -2,8 +2,41 @@ import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "react-router-dom"
 import VerificationInput from "react-verification-input";
 import "./sms.css"
+import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
 
 const Sms = () => {
+    const state = useSelector((prev) => prev)
+    const dispatch = useDispatch()
+    
+    const submitHandler = () => {
+        fetch("https://fakestoreapi.com/auth/login", {
+            method: "POST",
+            body: JSON.stringify({
+                username: "mor_2314",
+                password: "83r5^_",
+            }),
+            headers: {
+                "Content-Type": "Application/json",
+            },
+        })
+            .then((res) => {
+                if (res.status >= 400) {
+                    throw new Error("Login qilishda xatolik");
+                }
+                return res.json();
+            })
+            .then((json) => {
+                // Login(json.token);
+                dispatch({ type: "login", payload: json.token })
+                console.log(json.token);
+                
+            })
+            .catch((err) => {
+                toast.error(err.message);
+            });
+    };
+    
 
     return (
         <div className="text-white mx-auto text-center">
@@ -23,11 +56,11 @@ const Sms = () => {
                 <p className="mt-4 mb-6">Отправить код еще раз – <span className="text-[red]">0:52</span></p>
                 <div>
                     <Link className="mx-auto bg-[red] rounded-[8px] px-24 py-4 font-bold" to="/">
-                        <buton>Регистрация</buton>
+                        <buton onClick={submitHandler}>Регистрация</buton>
                     </Link>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 
