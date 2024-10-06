@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import leftButton from "../assets/Group 24.svg"
+import rightButton from "../assets/Group 23.svg"
 
 const Render = ({ data = [] }) => {
 
     return (
         <ul className="flex justify-between items-center mt-8">
-            <li><button><img src="/public/Group 24.svg" alt="" /></button></li>
+            <li><button><img src={leftButton} alt="" /></button></li>
             {typeof data === 'object' && data.length > 0  && data.map(post => {
                 return (
                     <Link to={`/seance/${post.id}`} key={post.id}>
@@ -17,7 +19,7 @@ const Render = ({ data = [] }) => {
                 )
             })
             }
-            <li><button><img src="/public/Group 23.svg" alt="" /></button></li>
+            <li><button><img src={rightButton} alt="" /></button></li>
         </ul>
     )
 }

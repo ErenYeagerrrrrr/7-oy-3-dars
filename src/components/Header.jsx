@@ -1,9 +1,9 @@
 import { Link} from "react-router-dom"
-import logo from "../../public/logo.svg"
-import main from "../../public/Main.svg"
-import transfer from "../../public/Transfer.svg"
-import monitoring from "../../public/Monitoring.svg"
-import monitoring2 from "../../public/Monitoring (1).svg"
+import logo from "../assets/logo.svg"
+import main from "../assets/Main.svg"
+import transfer from "../assets/Transfer.svg"
+import monitoring from "../assets/Monitoring.svg"
+import monitoring2 from "../assets/Monitoring (1).svg"
 
 
 const Header = () => {

@@ -1,4 +1,4 @@
-import crown from '../../../public/crown.svg'
+import crown from '../../assets/crown.svg'
 const BiletPrice = () => {
   return (
     <div>

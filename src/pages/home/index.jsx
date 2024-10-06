@@ -3,12 +3,14 @@
 import Loader from "../../components/Loader"
 import Render from "../../components/Render"
 import useGetData from "../../components/useCard"
-import rectangle from "../../../public/Rectangle 64.png"
-import rectangle2 from "../../../public/Rectangle 6.svg"
-import rectangle3 from "../../../public/Rectangle 7.png"
-import rectangle4 from "../../../public/Rectangle 8.png"
-import rectangle5 from "../../../public/Rectangle 9.png"
-import watch from "../../../public/Content.svg"
+import rectangle from "../../assets/Rectangle 64.png"
+import rectangle2 from "../../assets/Rectangle 6.svg"
+import rectangle3 from "../../assets/Rectangle 7.png"
+import rectangle4 from "../../assets/Rectangle 8.png"
+import rectangle5 from "../../assets/Rectangle 9.png"
+import watch from "../../assets/Content.svg"
+import leftBuutton from "../../assets/Group 24.svg"
+import rightBuutton from "../../assets/Group 23.svg"
  
 const HomePage = () => {
   const {data, loading, error} = useGetData('https://posts-server-w1w6.onrender.com/films')
@@ -34,12 +36,12 @@ const HomePage = () => {
             <button className="py-[20px] px-[40px] bg-white rounded-[10px] mb-4"><img src={watch} alt="watch" /></button>
           </div>
           <ul className="flex gap-3 mt-4 mx-[30%] items-center">
-            <li><button><img src="/public/Group 24.svg" alt="" /></button></li>
+            <li><button><img src={leftBuutton} alt="" /></button></li>
             <li><img src={rectangle2} alt="" /></li>
             <li><img src={rectangle3} alt="" /></li>
             <li><img src={rectangle4} alt="" /></li>
             <li><img src={rectangle5} alt="" /></li>
-            <li><button><img src="../../../public/Group 23.svg" alt="" /></button></li>
+            <li><button><img src={rightBuutton} alt="" /></button></li>
           </ul>
         </div>
       </section>

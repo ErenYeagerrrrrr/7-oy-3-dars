@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
 import { InputMask } from '@react-input/mask';
+import facebookSvg from '../../assets/faceboock.svg'
+import googleSvg from '../../assets/google.svg'
 
 const Login = () => {
   const [tel, setTel] = useState('')
@@ -20,8 +22,8 @@ const Login = () => {
           <p>или</p>
         </div>
         <div className="flex justify-center items-center gap-3" >
-          <a className="flex gap-3 bg-[#111111] p-4 rounded-[10px]" href="#"><img src="/public/faceboock.svg" alt="Facebook" />Facebook</a>
-          <a className="flex gap-3 bg-[#111111] p-4 rounded-[10px]" href="#"><img src="/public/google.svg" alt="Google" />Google</a>
+          <a className="flex gap-3 bg-[#111111] p-4 rounded-[10px]" href="#"><img src={facebookSvg} alt="Facebook" />Facebook</a>
+          <a className="flex gap-3 bg-[#111111] p-4 rounded-[10px]" href="#"><img src={googleSvg} alt="Google" />Google</a>
         </div>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import useGetData from '../../components/useCard'
 import Loader from '../../components/Loader'
-import Bilet from '../../../public/bilet.svg'
+import Bilet from '../../assets/bilet.svg'
 import { IoIosArrowBack } from 'react-icons/io'
 import { useState } from 'react'
 import CalendarBtn from '../../components/button/CalendarBtn'
 import BiletPrice from '../../components/button/BiletPrice'
-import IMDB from '../../../public/Group 30.svg'
-import Kinopoisk from '../../../public/Group 29.svg'
+import IMDB from '../../assets/Group 30.svg'
+import Kinopoisk from '../../assets/Group 29.svg'
 const Seance = () => {
     const [tab, setTab] = useState(1)
     const { id } = useParams()

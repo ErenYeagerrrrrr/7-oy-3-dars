@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react"
+import rectangle from "../../img/Rectangle 64.png"
 
 import "swiper/css"
 
@@ -11,7 +12,7 @@ const Slider = () => {
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide><img src="../../img/Rectangle 64.png" alt="" /></SwiperSlide>
+                <SwiperSlide><img src={rectangle} alt="" /></SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
                 <SwiperSlide>Slide 4</SwiperSlide>
