@@ -10,7 +10,7 @@ const Slider = () => {
                 spaceBetween={50}
                 slidesPerView={2}
                 onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                onSwiper={(swiper) => e.log(swiper)}
             >
                 <SwiperSlide><img src={rectangle} alt="" /></SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>

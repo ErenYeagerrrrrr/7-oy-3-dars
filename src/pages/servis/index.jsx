@@ -9,6 +9,7 @@ import theatre from "../../assets/clapperboard-line.svg"
 import kino from "../../assets/Vector.svg"
 import konsert from "../../assets/movie-2-line.svg"
 import CalendarBtn from "../../components/button/CalendarBtn"
+import { Outlet } from "react-router-dom"
 const Servis = () => {
   const { data, loading, error } = useGetData('https://posts-server-w1w6.onrender.com/films')
 

@@ -9,6 +9,7 @@ const authReducer = (state = initealState, action) => {
       ...state,
       token: action.payload
     };
+    
   }
   return state
 }

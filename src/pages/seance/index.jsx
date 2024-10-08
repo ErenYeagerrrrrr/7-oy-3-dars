@@ -8,12 +8,14 @@ import CalendarBtn from '../../components/button/CalendarBtn'
 import BiletPrice from '../../components/button/BiletPrice'
 import IMDB from '../../assets/Group 30.svg'
 import Kinopoisk from '../../assets/Group 29.svg'
+import useStore from '../../zustant/store'
 const Seance = () => {
     const [tab, setTab] = useState(1)
     const { id } = useParams()
     const navigate = useNavigate()
+    const { setTicket, tickets } = useStore()
 
-    const { data, loading, error } = useGetData(`https://posts-server-w1w6.onrender.com/films/${id}`)
+    const { data = {}, loading, error } = useGetData(`https://posts-server-w1w6.onrender.com/films/${id}`)
     if (loading) {
         return <div><Loader /></div>
     }
@@ -26,12 +28,17 @@ const Seance = () => {
 
                 <div>
                     <IoIosArrowBack onClick={() => navigate(-1)} className="text-[red] bg-[#111111] w-16 h-16 rounded-xl absolute top-[50px] left-[50px] cursor-pointer" size={30} />
-                    <img className="w-full h-[640px]" src={data.img} alt="" />
+                    <img className="w-full h-[640px]" src={data?.img} alt="" />
                 </div>
                 <div className="animation__block__content absolute top-[420px] right-0 left-0 text-white text-center mb-4">
                     <h2 className="text-[30px] font-bold">{data.title}</h2>
                     <p className="text-[20px] mb-4">2024 • Комедия • 1ч 34м • EN • 6+</p>
-                    <button className="py-[20px] px-[120px] bg-[red] rounded-[10px] mb-4"><img src={Bilet} alt="watch" /></button>
+                    <button onClick={
+                        () => {
+                            tickets.filter(item => item.id === data.id).length > 0 ? alert("Такой билет уже бронирован") : setTicket(data)
+                            navigate('/bilet')
+                        }
+                    } className="py-[20px] px-[120px] bg-[red] rounded-[10px] mb-4"><img src={Bilet} alt="watch" /></button>
                 </div>
             </div>
             <button style={{ transform: 'translate(-50%' }} className="bg-[#111111] rounded-xl w-[380px] text-white ml-[50%]">

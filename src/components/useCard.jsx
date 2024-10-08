@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { request } from "../utils/api/request"
-import { toast } from "react-toastify"
+// import { toast } from "react-toastify"
 import { useQuery} from "@tanstack/react-query"
 
 
@@ -23,7 +23,7 @@ const useCard = (url) => {
                 })
                 .catch((err) => {
                     setError(err.message || 'Failed to fetch posts')
-                    toast.error(err.message || 'Failed to fetch posts')
+                    alert.error(err.message || 'Failed to fetch posts')
                 })
                 .finally(() => {
                     setIsLoading(false)

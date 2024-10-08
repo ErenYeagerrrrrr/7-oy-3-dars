@@ -17,7 +17,7 @@ const Login = () => {
         <div className="flex flex-col gap-3">
         <InputMask onChange={(e) => setTel(e.target.value)} value={tel} className="w-[380px] h-[52px] text-white mx-auto bg-[#111111] rounded-[8px] p-3 font-bold" mask="+998 (__) ___-__-__" replacement={{ _: /\d/ }} />
           <Link className="w-[380px] h-[52px]  mx-auto bg-[red] rounded-[8px] p-3 font-bold" to="/sms">
-            <buton>Регистрация</buton>
+            <button>Регистрация</button>
           </Link>
           <p>или</p>
         </div>
@@ -30,3 +30,4 @@ const Login = () => {
   )
 }
 export default Login 
+  

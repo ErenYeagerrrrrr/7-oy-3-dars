@@ -2,11 +2,12 @@ import { IoIosArrowBack } from "react-icons/io"
 import { Link } from "react-router-dom"
 import VerificationInput from "react-verification-input";
 import "./sms.css"
-import { toast } from "react-toastify";
-import { useDispatch, useSelector } from "react-redux";
+// import { toast } from "react-toastify";
+import { useDispatch} from "react-redux";
+
 
 const Sms = () => {
-    const state = useSelector((prev) => prev)
+    // const state = useSelector((prev) => prev)
     const dispatch = useDispatch()
     
     const submitHandler = () => {
@@ -21,19 +22,19 @@ const Sms = () => {
             },
         })
             .then((res) => {
+                
                 if (res.status >= 400) {
                     throw new Error("Login qilishda xatolik");
                 }
                 return res.json();
             })
             .then((json) => {
-                // Login(json.token);
                 dispatch({ type: "login", payload: json.token })
-                console.log(json.token);
-                
+                localStorage.setItem("token", json.token);
+                alert.success("Login muvaffaqiyatli amalga oshirildi");
             })
             .catch((err) => {
-                toast.error(err.message);
+                alert.error(err.message);
             });
     };
     
@@ -53,10 +54,10 @@ const Sms = () => {
                     characterSelected: "character--selected",
                     characterFilled: "character--filled",
                 }} type="number" placeholder=" " length={4} />
-                <p className="mt-4 mb-6">Отправить код еще раз – <span className="text-[red]">0:52</span></p>
+                <p className="mt-4 mb-6">Отправить код еще раз – <span className="text-[red]">00:59</span></p>
                 <div>
                     <Link className="mx-auto bg-[red] rounded-[8px] px-24 py-4 font-bold" to="/">
-                        <buton onClick={submitHandler}>Регистрация</buton>
+                        <button onClick={submitHandler}>Регистрация</button>
                     </Link>
                 </div>
             </div >
